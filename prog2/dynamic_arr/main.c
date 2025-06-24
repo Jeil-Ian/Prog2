@@ -5,7 +5,7 @@
 int* init (int size);
 void InsertFront (int arr[], int *size, int *count, int value);
 void display (int arr[], int *size);
-
+void insertLast(int *arr, int *size, int val);
 
 int main() {
     int size, value;
@@ -24,8 +24,9 @@ int main() {
     }
 
 
-display (arr, &size);
-
+    display (arr, &size);
+    insertLast(arr, &size, 1000);
+    display (arr, &size);
 
     return 0;
     
@@ -54,4 +55,8 @@ for (int i=0; i<*size; i++){
 }
 
 
+}
+
+void insertLast(int *arr, int *size, int val) {
+    arr[(*size)++] = val;
 }
